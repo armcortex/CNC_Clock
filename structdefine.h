@@ -29,11 +29,11 @@ typedef struct sCNCData
 {
 	int xPos, yPos, zPos;
 	int xCnt, yCnt, zCnt;
-    int xSet, ySet, zSet;
-    int xDir, yDir, zDir;
+    	int xSet, ySet, zSet;
+    	int xDir, yDir, zDir;
 	boolean xOk, yOk, zOk;
-    int dir, temp, temp2;
-    String str;
+    	int dir, temp, temp2;
+    	String str;
 };
 
 typedef struct sPos
@@ -44,7 +44,7 @@ typedef struct sPos
 typedef struct sTime
 {
 	int Hour, Min, Sec;
-    int H1, H2, M1, M2;
+	int H1, H2, M1, M2;
 };
 
 const byte OneCnt[] = { 0x01, 0x02,0x04, 0x08 };
