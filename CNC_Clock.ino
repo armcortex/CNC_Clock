@@ -239,7 +239,7 @@ boolean RangeLimit( String StrAxis, int dir )
 {
 	if( StrAxis == "Xaxis" )
 	{
-		int inHome = ( PIND & 0x80 ) >> XLimitHome;	//read pin 7
+		int inHome = ( PIND & 0x80 ) >> XLimitHome;	//read pin
 		int inEnd  = ( PIND & 0x40 ) >> XLimitEnd;
 		
 		if( (inHome == Xhome) && (inEnd != Xend) && (dir>0) )
@@ -256,7 +256,7 @@ boolean RangeLimit( String StrAxis, int dir )
 
 	if( StrAxis == "Yaxis" )
 	{
-		int inHome = ( PINB & 0x20 ) >> YLimitHome;	//read pin 7
+		int inHome = ( PINB & 0x20 ) >> YLimitHome;	//read pin
 		int inEnd  = ( PINB & 0x10 ) >> YLimitEnd;
 		
 		if( (inHome == Yhome) && (inEnd != Yend) && (dir>0) )
@@ -272,7 +272,7 @@ boolean RangeLimit( String StrAxis, int dir )
 	}
 	if( StrAxis == "Zaxis" )
 	{
-		int inHome = ( PINC & 0x10 ) >> ZLimitHome;	//read pin 7
+		int inHome = ( PINC & 0x10 ) >> ZLimitHome;	//read pin
 
 		if( (inHome == Zhome) && (dir>0) )
 			return true;
