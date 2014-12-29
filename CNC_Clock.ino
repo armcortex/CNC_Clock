@@ -184,7 +184,7 @@ void runMotorX( int dir, int xcoord )
         xMotorStop();
 }
 
-boolean runMotorY( int dir, int ycoord )
+void runMotorY( int dir, int ycoord )
 { 
     if( (dir>0) && (CNC.yPos >= ycoord) ) CNC.yOk = true;
     else if( (dir<0) && (CNC.yPos <= ycoord) ) CNC.yOk = true;
@@ -202,11 +202,9 @@ boolean runMotorY( int dir, int ycoord )
     }
     else
         yMotorStop();
- 
-    return CNC.yOk;
 }
 
-boolean runMotorZ( int dir, int zcoord )
+void runMotorZ( int dir, int zcoord )
 {
     if( (dir>0) && (CNC.zPos >= zcoord) ) CNC.zOk = true;
     else if( (dir<0) && (CNC.zPos <= zcoord) ) CNC.zOk = true;
@@ -224,8 +222,6 @@ boolean runMotorZ( int dir, int zcoord )
     }
     else
         zMotorStop();
- 
-    return CNC.zOk;
 }
 
 void MotorTest( int dir )	//pos X, Y, Z
